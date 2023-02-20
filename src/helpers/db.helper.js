@@ -3,9 +3,9 @@ const AppConfig = require('../config/app.config');
 const logger = require('./logger.helper');
 const { MESSAGES } = require('../config/constants.config');
 
-const DB_URI = AppConfig.DB_URI;
+const DB_URI = AppConfig.MONGO_URI;
 
-const connectToMongoDB = () => {
+const connectToMongoDB = async () => {
     logger.info(MESSAGES.DB_ATTEMPT_TO_CONNECT);
     mongoose
       .set('strictQuery', false)

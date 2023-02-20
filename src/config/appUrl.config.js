@@ -10,12 +10,22 @@ const ENDPOINTS = {
     
     
     // Auth
-    REGISTER: `${AUTH_PREFIX}/register`,
-    LOGIN: `${AUTH_PREFIX}/login`,
-    RESET_PASSWORD: `${AUTH_PREFIX}/reset-password`,
+    REGISTER: `/register`,
+    LOGIN: `/login`,
+    RESET_PASSWORD: `/reset-password`,
+    VERIFY_EMAIL_ADDRESS: `/verify-email-address`,
+    PASSWORD_FORGOT: `/password-forgot`,
+    RESET_PASSWORD: `/reset-password`,
+    UPDATE_USER_ROLE: `/update-user-role`,
+    SET_AMBASSADOR: `/set-ambassador`,
+    CLOSE_ACCOUNT: `/close-account`,
     
     // Users
-    USER_PROFILE: `${USERS_PREFIX}/profile`,
+    USER_PROFILE: `/:id`,
+    FIND_ALL_USERS: `/`,
+    FIND_USER_BY_ID: `/`,
+    UPDATE_USER: `/`,
+    FIND_ADMIN_USERS: `/admins`,
 }
 
 console.log(ENDPOINTS);
