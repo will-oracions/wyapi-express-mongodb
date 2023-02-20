@@ -1,6 +1,14 @@
 version: "3.8"
 services:
+  database:
+    image: mongo
+    container_name: wetywebsite_database
+  env:
+    - MONGO_USERNAME=root
+    - MONGO_PASSWORD=root
   api:
+    dependOn:
+      - database
     build:
       image: wetywebsite_api
       container_name: wetywebsite_api
