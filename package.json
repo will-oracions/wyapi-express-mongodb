@@ -1,12 +1,13 @@
 {
-  "name": "auth",
+  "name": "wetywebsiteapi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "start:dev": "nodemon ./src/index"
+    "start": "node bin/www",
+    "start:dev": "nodemon ./src/index",
+    "prestart": "npm install",
+    "pretest": "npm install"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  api:
+    build:
+      image: wetywebsite_api
+      container_name: wetywebsite_api
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 2023:43000
+    volumes:
+      - src:/app/src
+      - package.json:/app/package.json
+      - package-lock.json:/app/package-lock.json
+    env_file:
+      - .env.docker
+networks:
+  wetywebsiteapi:
+volumes:
+  wetywebsiteapi:
